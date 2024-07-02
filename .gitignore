@@ -1,2 +1,12 @@
-*.json
-./post.html
+# ignore keys and test folders
+keys/
+test/
+
+# ignore python cache
+__pycache__/
+
+# ignore vscode
+.vscode/
+
+# ignore macOS
+.DS_Store
