@@ -2,7 +2,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-cred = credentials.Certificate('serviceAccountKey.json')
+cred = credentials.Certificate('keys/serviceAccountKey.json')
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
@@ -24,8 +24,4 @@ def upload(subreddit, id, author, title, content, next_part="NONE", sentiment="N
             "author_gender": author_gender
         })
         
-        print(title + " was uploaded to firebase")
-
-
-
-
+        print(title + " was uploaded to database")
